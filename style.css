@@ -141,6 +141,50 @@ h3 {
   color: var(--text);
 }
 
+/* Hobbies Section Styles */
+.hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: var(--transition);
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 179, 71, 0.1);
+  border: 1px solid rgba(255, 179, 71, 0.2);
+  width: 150px;
+  text-align: center;
+}
+
+.hobby-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 179, 71, 0.2);
+  box-shadow: 0 5px 15px rgba(255, 179, 71, 0.2);
+}
+
+.hobby-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+}
+
+.hobby-text {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .gif-container {
   display: flex;
   justify-content: space-between;
@@ -597,177 +641,4 @@ footer {
   .gif-container {
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .side-gif {
-    width: 100px;
-  }
-
-  .experience-content {
-    flex-direction: column;
-  }
-  
-  .experience-images {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    
-    /* 新增：基础移动端样式（Mobile First） */
-body {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* 修改：导航栏响应式 */
-.nav-links {
-  flex-direction: column;
-  padding: 10px;
-}
-
-/* 新增：完整断点系统 */
-/* 小手机 (≤576px) - 默认样式已处理 */
-
-/* 大手机 (≥577px) */
-@media (min-width: 577px) {
-  .nav-links {
-    flex-direction: row;
-  }
-  .profile-header {
-    flex-direction: row;
-  }
-}
-
-/* 平板 (≥768px) */
-@media (min-width: 768px) {
-  .experience-content {
-    flex-direction: row;
-  }
-  .experience-images {
-    width: 40%;
-  }
-}
-
-/* 桌面 (≥992px) */
-@media (min-width: 992px) {
-  .container {
-    padding: 0 40px;
-  }
-  .gif-container img {
-    width: 150px;
-  }
-}
-
-/* 大桌面 (≥1200px) */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-    
-    /* 修改：响应式字体 */
-h1 {
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
-}
-h2 {
-  font-size: clamp(1.3rem, 5vw, 2rem);
-}
-.contact-value {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
-}
-    
-    /* 修改：表单响应式 */
-.contact-form {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  .double-column {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-    
-    /* 修改：项目画廊 */
-.gallery {
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-    
-    /* 新增：触控元素优化 */
-a, button, .certificate-link, .exp-img-link {
-  min-width: 44px;
-  min-height: 44px;
-  touch-action: manipulation;
-}
-
-.submit-btn {
-  padding: 12px 24px;
-}
-    
-    /* 新增：图片加载优化 */
-img {
-  will-change: transform;
-  loading: lazy;
-}
-
-/* 新增：减少布局偏移 */
-.exp-img-right, .certificate-img {
-  aspect-ratio: 1;
-  background: rgba(0,0,0,0.05);
-}
-    
-    /* 新增：系统黑暗模式适配 */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #121212;
-    color: #f0f0f0;
-  }
-}
-    
-    <!-- 在导航部分添加移动菜单按钮 -->
-<nav class="nav-links" id="mainNav">
-  <button class="mobile-menu-toggle" aria-label="Menu">
-    <span class="hamburger"></span>
-  </button>
-  <div class="nav-items">
-    <a href="#about">About Me</a>
-    <!-- 其他导航项 -->
-  </div>
-</nav>
-    
-    /* 移动菜单样式 */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-}
-
-@media (max-width: 576px) {
-  .mobile-menu-toggle {
-    display: block;
-  }
-  .nav-items {
-    display: none;
-    flex-direction: column;
-  }
-  .nav-items.active {
-    display: flex;
-  }
-}
+    flex
