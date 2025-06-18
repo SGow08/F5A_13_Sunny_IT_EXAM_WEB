@@ -205,38 +205,49 @@ h3 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Experience Section with Images Below */
 .experience-content {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
-.experience-text {
-  flex: 1;
-}
-
-.experience-images {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.exp-img-link {
-  display: block;
-  cursor: zoom-in;
-  transition: all 0.3s ease;
-}
-
-.exp-img-right {
+.experience-images-below {
   width: 100%;
+  margin-top: 20px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.image-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.image-group p {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exp-img-below {
+  width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: 2px solid var(--accent);
+  display: block;
+  margin: 0 auto;
 }
 
-.exp-img-link:hover .exp-img-right {
+.exp-img-link:hover .exp-img-below {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -608,37 +619,4 @@ footer {
   margin: 15px auto;
   display: block;
   width: 80%;
-  text-align: center;
-  color: var(--text);
-  padding: 10px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-
-  .nav-links {
-    gap: 10px;
-    padding: 12px 5px;
-  }
-
-  .nav-links a {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
-
-  .gif-container {
-    flex-direction: row;
-    justify-content: space-around;
-    flex
+  text-align
